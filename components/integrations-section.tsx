@@ -14,6 +14,13 @@ import {
 } from "@/components/ui/sheet";
 import { Badge } from "./ui/badge";
 import { AspectRatio } from "./ui/aspect-ratio";
+import { Separator } from "./ui/separator";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 export type IntegrationsSectionProps = {
   title?: React.ReactNode;
   description?: React.ReactNode;
@@ -68,6 +75,9 @@ const IntegrationCard = ({
   price,
   image,
   quantity,
+  compositions,
+  modeUtilisation,
+  modeConservation,
   link = "/placehold.svg",
 }: {
   title: string;
@@ -75,6 +85,9 @@ const IntegrationCard = ({
   link?: string;
   price?: string;
   image?: string;
+  compositions?: string;
+  modeUtilisation?: string;
+  modeConservation?: string;
   quantity?: string;
 }) => {
   return (
@@ -126,20 +139,41 @@ const IntegrationCard = ({
                       fill
                     />
                   </AspectRatio>
-              <div className="flex justify-between mt-3 px-2">
-                <div className="space-x-2">
-                  <span className="text-muted-foreground flex gap-1">
-                    <HandCoinsIcon /> {price || "N/A"}
-                  </span>
-                </div>
-                <Badge variant="outline" className="min-w-16">
-                  {quantity || "0g"}
-                </Badge>
-              </div>
+                  <div className="flex justify-between mt-3 px-2">
+                    <div className="space-x-2">
+                      <span className="text-muted-foreground flex gap-1">
+                        <HandCoinsIcon /> {price || "N/A"}
+                      </span>
+                    </div>
+                    <Badge variant="outline" className="min-w-16">
+                      {quantity || "0g"}
+                    </Badge>
+                  </div>
                   <div className="mt-4">{description}</div>
                 </SheetDescription>
               </SheetHeader>
-              
+              <div className="px-4">
+                <Accordion type="single" collapsible>
+                  {compositions&&<AccordionItem value="item-2">
+                    <AccordionTrigger>Compositions</AccordionTrigger>
+                    <AccordionContent>
+                      {compositions}
+                    </AccordionContent>
+                  </AccordionItem>}
+                  {modeUtilisation&&<AccordionItem value="item-3">
+                    <AccordionTrigger>Mode d'utilisation</AccordionTrigger>
+                    <AccordionContent>
+                      {modeUtilisation}
+                    </AccordionContent>
+                  </AccordionItem>}
+                  {modeConservation&&<AccordionItem value="item-4">
+                    <AccordionTrigger>Mode de conservation</AccordionTrigger>
+                    <AccordionContent>
+                      {modeConservation}
+                    </AccordionContent>
+                  </AccordionItem>}
+                </Accordion>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
