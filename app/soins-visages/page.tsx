@@ -1,78 +1,24 @@
 import { IntegrationsSection } from "@/components/integrations-section";
 
+
 export default function SoinsVisagesPage() {
   return (
     <main>
       <IntegrationsSection
             title="Huiles Végétales"
-            description="Découvrez notre sélection d'huiles végétales pures et naturelles, idéales pour nourrir, hydrater et revitaliser votre peau en profondeur."
+            description=""
             items={[
               {
-                title: "Huile d'Argan",
+                title: "Cosmetique naturelle",
                 quantity: "100ml",
-                description:
-                  "Riche en vitamine E et en acides gras essentiels, l'huile d'argan est parfaite pour hydrater et protéger la peau contre le vieillissement prématuré.",
+                description:"Cette crème est formulée à partir d'ingrédients naturels qui sont le beurre de cacao et l'huile de Calophyllum.",
                 image:"/placehold.svg",
-                link: "/produits/huile-argan",
+                link: "/produits/Crème hydratante, antiride et réparatrice à base de beurre de cacao et d'huile de Calophyllum",
+                price: "30.000Ar",
+                compositions:"Le beurre de cacao est riche en antioxydants comme les polyphénols, vitamine E,A,B,C et en acides gras essentiels tels que les acides stéariques, les acides oléiques, les acides linoléiques,qui aident à nourrir, à hydrater en profondeur, à atténuer les rides et à protéger la peau contre les agressions extérieurs. l'huile de Calophyllum qui est connu pour ses propriétés régénératrices, cicatrisantes et antiinflammatoires, aide à réparer la peau endommagée, à réduire les rides et à améliorer l'élascticité de la peau. Pour cela il contientdes acides gras essentiels tels que les acides oléiques, les acides linoléiques, les acides stéariques ainsi que des terpènoïdes, polyphénols, flavonoïdes et acides calophylliques et inophylliques.",
+                modeConservation:"A conserver dans un endroit sec, un milieu à température ambiante et à l'abri de la lumière",
+                modeUtilisation:"Il est conseiller d'utiliser une noisette de crème sur un visage propre. Appliquer le matin en massant délicatement jusqu'à absorption. La crème a une vertu antiride, hydratante et réparatrice. Après deux semaines d'utilisation de la crème régulièrement il est possible d'observer un phénomène de purge avec apparition de comédons ou de boutons, mais ne vous inquiétez pas c'est normal. L'huile de Calophyllum accélère la régénération cellulaire de votre peau, il va d'abord rendre visible les imperfections avant de les remplacer par la nouvelle peau. il se peut que vous ayez une sensation de gras sur votre visage après application de la crème, normalement cela ne dure pas longtemps mais si cela persiste c'est que vous en avez trop mis et il faudra plus de temps pour la pénétration totale de la crème. la crème est indiqué pour tout type de peau mais néanmoins peut être inadéquate pour une peau trop grasse."
               },
-              {
-                title: "Huile de Jojoba",
-                description:
-                  "L'huile de jojoba régule la production de sébum et convient à tous les types de peau, offrant une hydratation légère sans obstruer les pores.",
-                image: "/placehold.svg",
-                link: "/produits/huile-jojoba",
-              },
-              {
-                title: "Huile de Coco",
-                description:
-                  "L'huile de coco est connue pour ses propriétés nourrissantes et antibactériennes, idéale pour apaiser et revitaliser les peaux sèches.",
-                image: "/placehold.svg",
-                link: "/produits/huile-coco",
-              },
-              {
-                title: "Huile d'Amande Douce",
-                description:
-                  "Douce et apaisante, l'huile d'amande douce est parfaite pour les peaux sensibles et délicates, offrant une hydratation intense et un effet calmant.",
-                image:"/placehold.svg",
-                link: "/produits/huile-amande-douce",
-              },
-              {
-                title: "Huile de Rose Musquée",
-                description:
-                  "L'huile de rose musquée est reconnue pour ses propriétés régénérantes et cicatrisantes, idéale pour atténuer les cicatrices et rides.",
-                image: (
-                  "/placehold.svg"
-                ),
-                link: "/produits/huile-rose-musquee",
-              },
-              {
-                title: "Huile d'Avocat",
-                description:
-                  "Riche en vitamines A, D et E, l'huile d'avocat nourrit en profondeur et favorise l'élasticité de la peau, parfaite pour les peaux matures.",
-                image: (
-                  "/placehold.svg"
-                ),
-                link: "/produits/huile-avocat",
-              },
-              {
-                title: "Huile de Macadamia",
-                description:
-                  "L'huile de macadamia pénètre rapidement et apporte une hydratation durable, idéale pour protéger la peau des agressions extérieures.",
-                image: (
-                  "/placehold.svg"
-                ),
-                link: "/produits/huile-macadamia",
-              },
-              {
-                title: "Huile de Noisette",
-                description:
-                  "L'huile de noisette est légère et non grasse, parfaite pour réguler le sébum des peaux mixtes à grasses tout en nourrissant la peau.",
-                image: (
-                  "/placehold.svg"
-                ),
-                link: "/produits/huile-noisette",
-              },
-              
             ]}
           />
     </main>

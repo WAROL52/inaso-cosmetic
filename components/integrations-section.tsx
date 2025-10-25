@@ -31,14 +31,14 @@ export type IntegrationsSectionProps = {
     description: string;
     image: string;
     link?: string;
+      compositions?: string;
+  modeUtilisation?: string;
+  modeConservation?: string;
   }>;
 };
 
-export function IntegrationsSection({
-  title,
-  description,
-  items,
-}: IntegrationsSectionProps) {
+export function IntegrationsSection(props: IntegrationsSectionProps) {
+  const { title, description, items } = props;
   return (
     <section>
       <div className="py-32">
@@ -54,12 +54,7 @@ export function IntegrationsSection({
             {items?.map((item) => (
               <IntegrationCard
                 key={item.title}
-                title={item.title}
-                description={item.description}
-                link={item.link}
-                quantity={item.quantity}
-                price={item.price}
-                image={item.image}
+                {...item}
               />
             ))}
           </div>

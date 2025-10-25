@@ -29,7 +29,7 @@ export function Navbar() {
   })), [pathName])
   
   return (
-    <header className="border-b px-4 md:px-6">
+    <header className="border-b px-4 md:px-6 bg-transparent backdrop-blur-sm sticky top-0 z-50">
       <div className="flex h-16 items-center justify-between gap-4">
         {/* Left side */}
         <div className="flex items-center gap-2">
@@ -44,10 +44,12 @@ export function Navbar() {
                   <NavigationMenuItem key={link.href}>
                     <NavigationMenuLink
                       active={link.active}
-                      href={link.href}
                       className="py-1.5 font-medium text-muted-foreground hover:text-primary"
+                      asChild
                     >
-                      {link.label}
+                      <Link href={link.href}>
+                        {link.label}
+                      </Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 ))}
@@ -98,11 +100,13 @@ export function Navbar() {
                   {navigationLinks.map((link) => (
                     <NavigationMenuItem key={link.href} className="w-full">
                       <NavigationMenuLink
-                        href={link.href}
                         className="py-1.5"
                         active={link.active}
-                      >
+                        asChild
+                        >
+                        <Link href={link.href}>
                         {link.label}
+                        </Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   ))}
