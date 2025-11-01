@@ -44,7 +44,15 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              <div className="mt-10"></div>
+              <div className="mt-10">
+                <Image
+                  src="/logo_ispm.png"
+                  alt="certificat"
+                  width={150}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
 
